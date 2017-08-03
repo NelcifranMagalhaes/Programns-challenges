@@ -1,4 +1,5 @@
-
+#Dado um conjunto de números, descobrir o subconjunto em que a soma
+#dos elementos são de máxima soma.
 def sum_max_gg(deidara):
 	max_atual =0
 	xtemp = 0
@@ -8,7 +9,7 @@ def sum_max_gg(deidara):
 	xtemp = 0
 	length_list = len(deidara)
 
-	for i in xrange(length_list):
+	for i in range(length_list):
 		max_atual = max_atual + deidara[i]
 
 		if max_atual < 0:
@@ -19,30 +20,13 @@ def sum_max_gg(deidara):
 			max_total = max_atual
 			x = xtemp
 			y = i
-	print x
-	print y
-	print max_total
+	print(x)
+	print(y)
+	print(max_total)
 
-def frequently_word_gg(word):
-
-	word_size = len(word)
-
-	cont = 0
-
-
-	for i in word:
-		atual = i
-
-
-		for j in word:
-			if atual is j:
-				cont = cont + 1
-
-				maior = j 
-
-
-
-def conta_ocorrencias(s):
+# Dada uma palavra, escreva um algoritmo que retorne a sequência de
+#caracteres que mais aparecem em sequência.
+def frequently_word_gg(s):
     ocorrencias = {}
     for c in s:
         if c in ocorrencias:
@@ -56,6 +40,7 @@ def conta_ocorrencias(s):
 
 
 deidara = [2,-4, 6, 8, -10, 100, -6, 5]
+sum_max_gg(deidara)
+
 word = "deidaraai"
-print conta_ocorrencias(word)
-#sum_max_gg(deidara)
+print (frequently_word_gg(word))
